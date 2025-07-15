@@ -1,0 +1,50 @@
+
+/* 
+NAVIGATION
+*/
+
+.nav__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nav__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.img__logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 500px;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.logo__title {
+    font-size: 24px;
+    z-index: 1;
+}
+
+.background {
+    width: 100%;
+}
+
+.background__img {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.nav__links {
+    display: flex;
+    z-index: 1;
+}
+
+.nav__link {
+    text-decoration: none;
+}
