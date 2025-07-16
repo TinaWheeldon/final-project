@@ -9,6 +9,10 @@ a {
     text-decoration: none;
 }
 
+.blue {
+    color: blue;
+}
+
 /* 
 NAVIGATION
 */
@@ -52,7 +56,6 @@ NAVIGATION
     width: 100%;
     height: 300px;
     position: absolute;
-   
 }
 
 .nav__links {
@@ -100,4 +103,18 @@ LANDING
     border-radius: 500px;
     border: none;
     margin-left: 150px;
+}
+
+.photo__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popcorn__photo {
+    height: 300px;
+}
+
+.soda__photo {
+    height: 250px;
 }
