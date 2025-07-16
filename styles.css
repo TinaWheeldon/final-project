@@ -1,4 +1,5 @@
 
+
 /* 
 NAVIGATION
 */
@@ -8,6 +9,7 @@ NAVIGATION
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    position: relative;
 }
 
 .nav__logo {
@@ -38,14 +40,35 @@ NAVIGATION
 .background__img {
     width: 100%;
     height: 400px;
-    position: relative;
+    position: absolute;
 }
 
 .nav__links {
     display: flex;
     z-index: 1;
+    text-decoration: none;
 }
 
 .nav__link {
     text-decoration: none;
+}
+
+.search {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar__input {
+    border-radius: 500px;
+    padding: 14px;
+    position: relative;
+}
+
+.search__button {
+    position: absolute;
+    border-radius: 500px;
+    border: none;
+    margin-left: 150px;
 }
