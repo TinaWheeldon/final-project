@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 li {
     list-style-type: none;
     display: flex;
@@ -77,6 +83,7 @@ LANDING
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 40px;
 }
 
@@ -94,6 +101,10 @@ LANDING
     position: relative;
 }
 
+input {
+    font-size: 20px;
+}
+
 .search__button:hover {
     cursor: pointer;
 }
@@ -103,7 +114,7 @@ LANDING
     padding: 10px;
     border-radius: 500px;
     border: none;
-    margin-left: 550px;
+    margin-left: 500px;
 }
 
 .photo__wrap {
