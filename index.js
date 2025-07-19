@@ -11,28 +11,27 @@ async function fetchData() {
 
 fetchData()
 
-//const backgroundImg = document.querySelector(".background__img")
-//backgroundImg.scr = "./final assets/theater curtains.html"
 
 const movieListEl = document.querySelector(".movie-list")
 
 async function main() {
 const movie = await fetch("http://www.omdbapi.com/?s=fast&apikey=9aa666f1")
 const movieData = await movie.json()
-movieListEl.innerHTML = movieData.map((movie) => movieHTML(movie)).join("")
+movieListEl.innerHTML = movieData.Search.map((movie) => movieHTML(movie)).join("")
+console.log(movie)
 }
 
 main()
 
+function showMovieTitle(title) {
+    window.location.href = `${window.location}`
+}
+
 function movieHTML(movie) {
-        return `<div class="movie">
-            <div class="movie__container">
-                <div class="movie-list">
-                 <h1>Movie</h1>
-                <p>title</p>
-                <p>year</p>
-                <p>poster</p>    
-                </div>
-            </div>
-        </div>`
+        return `<div class="movie-list">
+                <h1>Movie</h1>
+                <p>${movie.title}</p>
+                <p>${movie.year}</p>
+                <p>${movie.poster}</p> 
+            </div>`
 }
