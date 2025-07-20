@@ -30,8 +30,8 @@ function showMovieTitle(title) {
 function movieHTML(movie) {
         return `<div class="movie-list">
                 <h1>Movie</h1>
-                <p>${movie.title}</p>
-                <p>${movie.year}</p>
-                <p>${movie.poster}</p> 
+                <p>${movie.Title}</p>
+                <p>${movie.Year}</p>
+                <p>${movie.Poster}</p> 
             </div>`
 }
