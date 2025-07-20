@@ -9,7 +9,7 @@ async function fetchData() {
     console.log(data)
 }
 
-fetchData()
+fetchData();
 
 
 const movieListEl = document.querySelector(".movie-list")
@@ -21,7 +21,7 @@ movieListEl.innerHTML = movieData.Search.map((movie) => movieHTML(movie)).join("
 console.log(movie)
 }
 
-main()
+main();
 
 function showMovieTitle(title) {
     window.location.href = `${window.location}`
