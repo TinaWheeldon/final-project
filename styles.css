@@ -118,10 +118,14 @@ input {
     margin-left: 500px;
 }
 
+.movies {
+    display: flex;
+    justify-content: center;
+}
+
 .movie-list {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     flex-wrap: wrap;
     width: calc(100% / 3);
@@ -146,8 +150,8 @@ input {
 
 .snack__photo {
     position: absolute;
-    padding-top: 300px;
-    visibility: hidden;
+    padding-top: 20px;
+    padding-left: 400px;
 }
 
 /*
