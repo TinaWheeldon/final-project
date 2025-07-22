@@ -9,6 +9,7 @@ li {
     display: flex;
     align-items: center;
     padding: 20px;
+    z-index: 2;
 }
 
 a {
@@ -49,11 +50,13 @@ NAVIGATION
     width: 100px;
     border-radius: 500px;
     margin-right: 20px;
+    z-index: 2;
 }
 
 .logo__title {
     font-size: 24px;
     color: blue;
+    z-index: 2;
 }
 
 .background {
@@ -62,8 +65,9 @@ NAVIGATION
 
 .background__img {
     position: absolute;
-    z-index: -1;
-
+    z-index: 1;
+    height: 325px;
+    width: 100%;
 }
 
 .nav__links {
@@ -76,17 +80,23 @@ NAVIGATION
     font-size: 20px;
 }
 
-
 /*
 LANDING
 */
+
+#landing-page {
+    background-color: black;
+}
 
 .landing__para {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-items: center;
+    padding-top: 40px;
     padding-bottom: 20px;
     font-size: 40px;
+    z-index: 2;
 }
 
 .search {
@@ -101,6 +111,7 @@ LANDING
     border-radius: 500px;
     padding: 14px 20px 20px;
     position: relative;
+    z-index: 2;
 }
 
 input {
@@ -117,6 +128,7 @@ input {
     border-radius: 500px;
     border: none;
     margin-left: 500px;
+    z-index: 2;
 }
 
 .movies {
