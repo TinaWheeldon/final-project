@@ -89,7 +89,7 @@ LANDING
 */
 
 #landing-page {
-    background-color: black;
+    background-color: rgb(65, 57, 57);
 }
 
 .landing__para {
@@ -136,25 +136,28 @@ input {
     z-index: 2;
 }
 
-.movies {
-    display: flex;
-    justify-content: center;
-}
-
 .movie-list {
     display: flex;
+    justify-content: center;
     text-align: center;
     flex-wrap: wrap;
     padding-top: 80px;
 }
 
+.movie:hover {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
 .movie {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
     font-size: 20px;
     color: blue;
-    margin-left: 150px;
     padding-bottom: 20px;
+    max-width: 300px;
 }
 
 .photo-wrap {
