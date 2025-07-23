@@ -23,10 +23,6 @@ console.log(movie)
 
 main();
 
-function showMovieTitle(title) {
-    window.location.href = `${window.location}`
-}
-
 function movieHTML(movie) {
         return `<div class="movie-list">
                <div class="movie">
