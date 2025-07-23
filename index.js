@@ -2,6 +2,14 @@
 //http://www.omdbapi.com/?apikey=9aa666f1&
 //"http://www.omdbapi.com/?s=fast&apikey=9aa666f1"
 
+let input = document.querySelector('input');
+
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        console.log(e.target.value)
+    }
+})
+
 async function fetchData() {
     const title = document.getElementById("title")
     const response = await fetch("http://www.omdbapi.com/?s=fast&apikey=9aa666f1")
@@ -32,3 +40,4 @@ function movieHTML(movie) {
                </div>
             </div>`
 }
+
