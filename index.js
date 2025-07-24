@@ -11,32 +11,26 @@ input.addEventListener('keyup', (e) => {
 })
 
 
-async function fetchData() {
+   async function main() {
     const title = document.getElementById("title")
     const response = await fetch("http://www.omdbapi.com/?s=fast&apikey=9aa666f1")
     const data = await response.json()
     console.log(data)
-  
-   const selectedTitle = title.slice(0, 9)
-   console.log(selectedTitle)
 }
 
-fetchData();
+main();
 
 
 const movieListEl = document.querySelector(".movie-list")
 
-async function main() {
+async function fetchData() {
 const movie = await fetch("http://www.omdbapi.com/?s=fast&apikey=9aa666f1")
 const movieData = await movie.json()
-movieListEl.innerHTML = movieData.Search.map((movie) => movieHTML(movie)).join("")
-console.log(movie)  
-
-
-
+movieListEl.innerHTML = movieData.Search.slice(0, 6).map((movie) => movieHTML(movie)).join("")
+console.log(movieData)  
 }
 
-main();
+fetchData();
 
 function movieHTML(movie) {
     return `<div class="movie-list">
@@ -48,9 +42,3 @@ function movieHTML(movie) {
     </div>`
     
 }
-
-         
-    //const title = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    //const deleted = title.splice(6 , 7)
-   // console.log(title)
-   // console.log(deleted)
