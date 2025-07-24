@@ -10,11 +10,14 @@ input.addEventListener('keyup', (e) => {
     }
 })
 
+
 async function fetchData() {
     const title = document.getElementById("title")
     const response = await fetch("http://www.omdbapi.com/?s=fast&apikey=9aa666f1")
     const data = await response.json()
     console.log(data)
+  
+   
 }
 
 fetchData();
@@ -26,18 +29,27 @@ async function main() {
 const movie = await fetch("http://www.omdbapi.com/?s=fast&apikey=9aa666f1")
 const movieData = await movie.json()
 movieListEl.innerHTML = movieData.Search.map((movie) => movieHTML(movie)).join("")
-console.log(movie)
+console.log(movie)  
+
+
+
 }
 
 main();
 
 function movieHTML(movie) {
-        return `<div class="movie-list">
-               <div class="movie">
-               <img src="${movie.Poster}" alt=""/>
-                <p>${movie.Title}</p>
-                <p>${movie.Year}</p>
-               </div>
-            </div>`
+    return `<div class="movie-list">
+    <div class="movie">
+    <img src="${movie.Poster}" alt=""/>
+    <p>${movie.Title}</p>
+    <p>${movie.Year}</p>
+    </div>
+    </div>`
+    
 }
 
+         
+    const title = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const deleted = title.splice(6 , 7)
+    console.log(title)
+    console.log(deleted)
