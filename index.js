@@ -17,7 +17,8 @@ async function fetchData() {
     const data = await response.json()
     console.log(data)
   
-   
+   const selectedTitle = title.slice(0, 9)
+   console.log(selectedTitle)
 }
 
 fetchData();
@@ -49,7 +50,7 @@ function movieHTML(movie) {
 }
 
          
-    const title = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    const deleted = title.splice(6 , 7)
-    console.log(title)
-    console.log(deleted)
+    //const title = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    //const deleted = title.splice(6 , 7)
+   // console.log(title)
+   // console.log(deleted)
