@@ -19,7 +19,7 @@ const movieListEl = document.querySelector(".movie-list")
    console.log(data)
 }
 
-main();
+main()
 
 
 async function fetchData() {
