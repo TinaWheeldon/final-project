@@ -73,7 +73,7 @@ window.addEventListener('load', function() {
     const loadingOverlay = document.getElementById('loadingOverlay')
     const content = document.getElementById('content')
 
-    loadingOverlay.style.display = 'none';
+    loadingOverlay.style.display = 'block';
 
     content.style.display = 'block'
 })

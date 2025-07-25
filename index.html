@@ -27,12 +27,17 @@
             
         </div>
     </header>
-    <div id="loadingOverlay">
-        <div class="spinner">
-            <i class="fas-solid fa-spinner"></i>
-        </div>
-        <div id="content" style="display: none;">
-            <section class="movies">
+
+    <section id="landing-page">
+        <h1 class="landing__para">Your<span class="blue">#1 website</span>for finding the<span class="blue">movies you love!</span></h1>
+        <div class="search">
+            <input type="text" class="searchbar" placeholder="Search by title">
+            <button class="search__button" onclick="fetchData()">🔍</button><br>
+         </div>
+            <div class="movies movies__loading">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
+          </div>
+        <section class="movies">
             <div class="movie-list">
                <div class="movie">
                 <img src="poster" alt=""/>
@@ -41,18 +46,8 @@
                </div>
             </div>
         </section>
-        </div>
-    </div>
-    <section id="landing-page">
-        <h1 class="landing__para">Your<span class="blue">#1 website</span>for finding the<span class="blue">movies you love!</span></h1>
-        <div class="search">
-            <input type="text" class="searchbar" placeholder="Search by title">
-            <button class="search__button" onclick="fetchData()">🔍</button><br>
-        </div>
-
             <div class="photo-wrap">
                 <img src="./final assets/snacks.png" class="snack__photo">
-                <img src="./final assets/popcorn.jpg" class="popcorn__img">
                 <img src="./final assets/soda.png" class="soda__img">
             </div>
     </section>

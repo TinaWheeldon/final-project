@@ -88,31 +88,34 @@ NAVIGATION
 LOADING
 */
 
-#loadingOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+.movies__loading {
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 9999;
+    justify-content: center;
+    padding-top: 300px;
+    font-size: 60px;
+    color: blue;
 }
 
-.spinner {
-    border: 8px solid white;
-    border-top: 8px solid blue;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+.movies__loading--spinner {
+    display: none !important;
 }
 
-@keyframes spin {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+.movies__loading .movies__loading--spinner {
+    display: block;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /*
@@ -129,7 +132,7 @@ LANDING
     justify-content: center;
     align-items: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 20px;
     font-size: 40px;
     z-index: 2;
@@ -196,32 +199,37 @@ input {
 
 .photo-wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 500px;
+    height: 600px;
 }
 
 .snack__photo {
     position: absolute;
-    padding-top: 100px;
+    margin-left: 100px;
+    padding-top: 20px;
     animation: spin 3s infinite ease;
 }
 
 @keyframes spin {
-    0% {transform: rotate(0deg);}
+    0% {transform: rotate(0);}
     100% {transform: rotate(50deg);}
     50% {transform: rotate(-50deg);}
 }
-.popcorn__img {
-    width: 500px;
-    height: 500px;
-    padding-top: 100px;
-}
 
 .soda__img {
+    position: absolute;
+    margin-left: 800px;
     width: 500px;
     height: 500px;
-    padding-top: 100px;
+    padding-top: 20px;
+    animation: spin 3s infinite ease;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(50deg);}
+    50% {transform: rotate(-50deg);}
 }
 
 /*
