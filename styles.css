@@ -84,6 +84,37 @@ NAVIGATION
     font-size: 25px;
 }
 
+/* 
+LOADING
+*/
+
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid white;
+    border-top: 8px solid blue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 /*
 LANDING
 */
@@ -143,7 +174,7 @@ input {
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    padding-top: 150px;
+    padding-top: 80px;
 }
 
 .movie:hover {
@@ -165,14 +196,32 @@ input {
 
 .photo-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 500px;
 }
 
 .snack__photo {
     position: absolute;
-    padding-top: 20px;
+    padding-top: 100px;
+    animation: spin 3s infinite ease;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(50deg);}
+    50% {transform: rotate(-50deg);}
+}
+.popcorn__img {
+    width: 500px;
+    height: 500px;
+    padding-top: 100px;
+}
+
+.soda__img {
+    width: 500px;
+    height: 500px;
+    padding-top: 100px;
 }
 
 /*

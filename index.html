@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a2598857b1.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -26,13 +27,12 @@
             
         </div>
     </header>
-    <section id="landing-page">
-        <h1 class="landing__para">Your<span class="blue">#1 website</span>for finding the<span class="blue">movies you love!</span></h1>
-        <div class="search">
-            <input type="text" class="searchbar" placeholder="Search by title">
-            <button class="search__button" onclick="fetchData()">🔍</button><br>
+    <div id="loadingOverlay">
+        <div class="spinner">
+            <i class="fas-solid fa-spinner"></i>
         </div>
-        <section class="movies">
+        <div id="content" style="display: none;">
+            <section class="movies">
             <div class="movie-list">
                <div class="movie">
                 <img src="poster" alt=""/>
@@ -41,8 +41,19 @@
                </div>
             </div>
         </section>
+        </div>
+    </div>
+    <section id="landing-page">
+        <h1 class="landing__para">Your<span class="blue">#1 website</span>for finding the<span class="blue">movies you love!</span></h1>
+        <div class="search">
+            <input type="text" class="searchbar" placeholder="Search by title">
+            <button class="search__button" onclick="fetchData()">🔍</button><br>
+        </div>
+
             <div class="photo-wrap">
                 <img src="./final assets/snacks.png" class="snack__photo">
+                <img src="./final assets/popcorn.jpg" class="popcorn__img">
+                <img src="./final assets/soda.png" class="soda__img">
             </div>
     </section>
 </body>

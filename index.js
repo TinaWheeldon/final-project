@@ -69,3 +69,12 @@ searchButton.addEventListener('click', function() {
   fetchData(searchInput.value);
 });
 
+window.addEventListener('load', function() {
+    const loadingOverlay = document.getElementById('loadingOverlay')
+    const content = document.getElementById('content')
+
+    loadingOverlay.style.display = 'none';
+
+    content.style.display = 'block'
+})
+
