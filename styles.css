@@ -88,20 +88,20 @@ NAVIGATION
 LOADING
 */
 
-.movies__loading {
+.movie__overlay--loading {
+    position: absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-top: 300px;
-    font-size: 60px;
+    align-items: center;
+    font-size: 50px;
     color: blue;
 }
 
 .movies__loading--spinner {
-    display: none !important;
+    
 }
 
-.movies__loading .movies__loading--spinner {
+.movie__overlay .movies__loading--spinner {
     display: block;
 }
 
@@ -178,6 +178,7 @@ input {
     text-align: center;
     flex-wrap: wrap;
     padding-top: 80px;
+    position: relative;
 }
 
 .movie:hover {
