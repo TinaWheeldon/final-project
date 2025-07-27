@@ -185,7 +185,6 @@ input {
     text-align: center;
     flex-wrap: wrap;
     padding-top: 80px;
-    position: relative;
 }
 
 .movie:hover {

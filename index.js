@@ -67,7 +67,11 @@ function displayMovies(movies) {
   movieListEl.innerHTML = movieHTML;
 }
 
-fetchData();
+setTimeout(() => {
+    fetchData()
+});
+
+
 
 searchInput.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
