@@ -34,8 +34,9 @@
             <input type="text" class="searchbar" placeholder="Search by title">
             <button class="search__button click" onclick="fetchData()">🔍</button><br>
          </div>
+
         <section class="movies">
-            <div class="movie-list">
+            <div id="content" class="movie-list">
                <div class="movie">
                 <img src="poster" alt=""/>
                 <p>title</p>
@@ -43,7 +44,7 @@
                </div>
             </div>
         </section>
-        <div class="movie__overlay movie__overlay--loading">
+                 <div class="movie__overlay movie__overlay--loading">
             <i class="fas fa-spinner movies__loading--spinner"></i>
         </div>
             <div class="photo-wrap">

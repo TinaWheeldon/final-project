@@ -25,8 +25,15 @@ function movieHTML(movie) {
 const searchInput = document.querySelector('.searchbar');
 const searchButton = document.querySelector('.search__button');
 const movieListEl = document.querySelector('.movie-list');
+const loadingOverlay = document.getElementById('loadingOverlay')
+const content = document.getElementById('content')
+
+
 
 async function fetchData(query = '') {
+    loadingOverlay.style.display = 'block'
+    content.style.display = 'none'
+
   const apiKey = '9aa666f1';
   const apiUrl = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`;
   
@@ -42,6 +49,9 @@ async function fetchData(query = '') {
   } catch (error) {
     console.error('Error fetching data:', error);
     movieListEl.innerHTML = '<p>Failed to fetch data. Please try again.</p>';
+  } finally {
+    loadingOverlay.style.display = 'none'
+    content.style.display = 'block'
   }
 }
 

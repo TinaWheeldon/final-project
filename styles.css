@@ -97,7 +97,7 @@ LOADING
 }
 
 .movies__loading--spinner {
-    display: none !important;
+    display: none;
 }
 
 .movie__overlay .movies__loading--spinner {
