@@ -12,27 +12,25 @@ console.log(movieData)
 main();
 
 function movieHTML(movie) {
- return `<div class="movie-list">
+ return `
  <div class="movie">
 <img src="${movie.Poster}" alt=""/>
 <p>${movie.Title}</p>
  <p>${movie.Year}</p>
-  </div>
- </div>`
+  </div>`
 }
-
 
 const searchInput = document.querySelector('.searchbar');
 const searchButton = document.querySelector('.search__button');
 const movieListEl = document.querySelector('.movie-list');
-const loadingOverlay = document.getElementById('loadingOverlay')
-const content = document.getElementById('content')
-
+const loadingOverlay = document.getElementById('loadingOverlay');
+const content = document.getElementById('content');
 
 
 async function fetchData(query = '') {
-    loadingOverlay.style.display = 'block'
-    content.style.display = 'none'
+
+  loadingOverlay.style.display = 'block';
+  content.style.display = 'none';
 
   const apiKey = '9aa666f1';
   const apiUrl = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`;
@@ -50,8 +48,9 @@ async function fetchData(query = '') {
     console.error('Error fetching data:', error);
     movieListEl.innerHTML = '<p>Failed to fetch data. Please try again.</p>';
   } finally {
-    loadingOverlay.style.display = 'none'
-    content.style.display = 'block'
+  
+    loadingOverlay.style.display = 'none';
+    content.style.display = 'block';
   }
 }
 
@@ -67,11 +66,8 @@ function displayMovies(movies) {
   movieListEl.innerHTML = movieHTML;
 }
 
-setTimeout(() => {
-    fetchData()
-});
 
-
+fetchData(); 
 
 searchInput.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
@@ -79,16 +75,7 @@ searchInput.addEventListener('keydown', function(e) {
   }
 });
 
+
 searchButton.addEventListener('click', function() {
   fetchData(searchInput.value);
 });
-
-window.addEventListener('load', function() {
-    const loadingOverlay = document.getElementById('loadingOverlay')
-    const content = document.getElementById('content')
-
-    loadingOverlay.style.display = 'block';
-
-    content.style.display = 'block'
-})
-
