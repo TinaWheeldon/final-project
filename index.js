@@ -39,7 +39,7 @@ const timeoutId = setTimeout(() => {
     loadingOverlay.style.display = 'none'
     content.style.display = 'block'
     movieListEl.innerHTML = '<p>No movies found.</p>'
-}, 5000)
+}, 6000)
 
   try {
     const response = await fetch(apiUrl);

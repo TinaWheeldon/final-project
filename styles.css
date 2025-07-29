@@ -134,10 +134,11 @@ LANDING
     position: relative;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 20px;
     font-size: 40px;
     z-index: 2;
+    color: rgb(37, 192, 37);
 }
 
 .search {
@@ -230,7 +231,7 @@ input {
 .soda__img {
     position: absolute;
     margin-left: 800px;
-    width: 500px;
+    width: 550px;
     height: 500px;
     padding-top: 20px;
     animation: spin 3s infinite ease;
@@ -246,9 +247,32 @@ input {
 MEDIA
 */
 
-@media(max-width:992px) {
-    .logo__title {
-        font-size: 30px;
+@media(max-width:1290px) {
+    .snack__photo {
+        width: 500px;
+        margin-left: 90x;
+    }
+
+    .soda__img {
+        width: 450px;
+        height: 400px;
+        margin-left: 700px;
+    }
+}
+
+@media(max-width:1120px) {
+    .snack__photo {
+        margin-left: 80px;
+    }
+
+    .soda__img {
+        margin-left: 600px;
+    }
+}
+
+@media (max-width:1200px) {
+        .logo__title {
+        font-size: 35px;
     }
 
     .nav__link {
@@ -256,11 +280,77 @@ MEDIA
     }
 
     .landing__para {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .movie {
         padding-top: 40px;
         font-size: 20px;
+    }
+
+        .snack__photo {
+        margin-left: 70px;
+    }
+
+    .soda__img {
+        margin-left: 500px;
+    }
+}
+
+@media(max-width:992px) {
+    .logo__title {
+        font-size: 30px;
+    }
+
+    .landing__para {
+        font-size: 30px;
+    }
+
+    .snack__photo {
+        width: 400px;
+        margin-left: 50px;
+    }
+
+    .soda__img {
+        width: 350px;
+        height: 300px;
+        margin-left: 450px;
+    }
+}
+
+@media(max-width:840px) {
+    .snack__photo {
+        margin-left: 40px;
+    }
+
+    .soda__img {
+        margin-left: 400px;
+    }
+}
+
+@media(max-width:768px) {
+    .landing__para {
+        font-size: 25px;
+    }
+
+    .snack__photo {
+        margin-left: 20px;
+    }
+
+    .soda__img {
+        margin-left: 350px;
+    }
+}
+
+@media(max-width:640px) {
+    .snack__photo {
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    .soda__img {
+        width: 250px;
+        height: 200px;
+        margin-left: 350px;
     }
 }
