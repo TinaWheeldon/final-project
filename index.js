@@ -50,7 +50,7 @@ async function fetchData(query = '') {
   } finally {
   
     loadingOverlay.style.display = 'none';
-    content.style.display = 'block';
+    content.style.display = 'block flex';
   }
 }
 
