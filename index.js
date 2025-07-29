@@ -29,10 +29,9 @@ const content = document.getElementById('content');
 
 async function fetchData(query = '') {
 
-  loadingOverlay.style.display = 'block';
+  loadingOverlay.style.display = 'flex';
   content.style.display = 'none';
-  return;
-
+  
   const apiKey = '9aa666f1';
   const apiUrl = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`;
   

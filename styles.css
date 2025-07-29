@@ -89,8 +89,7 @@ LOADING
 */
 
 #loadingOverlay {
-    display: flex;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .movie__overlay--loading {
@@ -113,7 +112,7 @@ LOADING
     animation: rotate 900ms infinite linear;
 }
 
-/* @keyframes rotate {
+ @keyframes rotate {
     0% {
         transform: rotate(0);
     }
@@ -188,7 +187,7 @@ input {
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    padding-top: 80px;
+    padding-top: 150px;
 }
 
 .movie:hover {
