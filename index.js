@@ -35,19 +35,31 @@ async function fetchData(query = '') {
   const apiKey = '9aa666f1';
   const apiUrl = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`;
   
+const timeoutId = setTimeout(() => {
+    loadingOverlay.style.display = 'none'
+    content.style.display = 'block'
+    movieListEl.innerHTML = '<p>No movies found.</p>'
+}, 5000)
+
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
 
     if (data.Response === 'True' && data.Search) {
       displayMovies(data.Search.slice(0, 6));
-    } else {
+      clearTimeout(timeoutId)
+    } 
+    else {
       movieListEl.innerHTML = '<p>No movies found.</p>';
+      clearTimeout(timeoutId)
     }
-  } catch (error) {
+  } 
+  catch (error) {
     console.error('Error fetching data:', error);
     movieListEl.innerHTML = '<p>Failed to fetch data. Please try again.</p>';
-  } finally {
+    clearTimeout(timeoutId)
+  } 
+  finally {
   
     loadingOverlay.style.display = 'none';
     content.style.display = 'block flex';
