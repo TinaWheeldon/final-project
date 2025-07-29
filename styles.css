@@ -88,6 +88,11 @@ NAVIGATION
 LOADING
 */
 
+#loadingOverlay {
+    display: flex;
+    margin-top: 80px;
+}
+
 .movie__overlay--loading {
     display: flex;
     justify-content: center;
@@ -108,7 +113,7 @@ LOADING
     animation: rotate 900ms infinite linear;
 }
 
-@keyframes rotate {
+/* @keyframes rotate {
     0% {
         transform: rotate(0);
     }
